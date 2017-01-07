@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>Funcionalidade Formulários</title>
+    <link rel="stylesheet" type="text/css" href="css/semantic.css" />
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" href="css/github.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="css/img/github.ico" type="image/x-icon"/>
+</head>
+<body>
+
+<div class="ui container margin-top">
+    <h2 class="ui center aligned inverted icon header">
+        <i class="circular users  icon"></i>
+        Formulário de Cadastro
+    </h2>
+
+<form class="ui form">
+    <div class="ui  grid ">
+
+    <div class="sixteen column row">
+        <div class="ten wide centered column">
+            <form class="ui form">
+                <h4 class="ui dividing header inverted">Informações Básicas</h4>
+
+                    <div class="three fields">
+
+                        <div class="field">
+                            <label for="pessoa[nome]">Nome</label>
+                            <input type="text" name="pessoa[nome]" placeholder="Nome" id="pessoa[nome]">
+                        </div>
+                        <div class="field">
+                            <label for="pessoa[sobrenome]">Sobrenome</label>
+                            <input type="text" name="pessoa[sobrenome]" placeholder="Sobrenome" id="pessoa[sobrenome]">
+                        </div>
+                        <div class="field">
+                            <label for="pessoa[data-nascimento]">Data de Nascimento</label>
+                            <input type="text" name="pessoa[data-nascimento]" placeholder="dd/mm/aaaa" id="pessoa[data-nascimento]">
+                        </div>
+                    </div>
+                <h4 class="ui dividing header inverted">Informações de Contato</h4>
+                <div class="fields">
+                    <div class="ten wide field">
+                        <label for="pessoa[email]">Email</label>
+                        <input type="text" name="pessoa[email]" placeholder="" id="pessoa[email]">
+
+                    </div>
+                    <div class="six wide field">
+                        <label for="pessoa[telefone]">Telefone</label>
+                        <input type="text" name="pessoa[telefone]" placeholder="Telefone" id="pessoa[telefone]">
+
+                    </div>
+
+
+
+                </div>
+
+                <h4 class="ui dividing header inverted">Endereço</h4>
+
+                <div class="fields">
+                    <div class="six wide field">
+                        <label>CEP</label>
+                        <div class="ui action input">
+                            <input type="text" name="pessoa[cep]">
+                            <button class="ui teal right labeled icon button pesquisa-cep">
+                                <i class="search icon cep-icon"></i>
+                                Pesquisar
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="nine wide field">
+                        <label>Rua</label>
+                        <input type="text" name="pessoa[rua]" placeholder="Rua"/>
+
+                    </div>
+
+
+                </div>
+
+                <div class="two fields">
+                    <div class="field">
+                        <label>Estado</label>
+                        <select class="ui fluid dropdown" name="pessoa[estado]">
+                            <option value="">Selecione seu Estado</option>
+                            <option value="CE">Ceará</option>
+                            <option value="SP">São Paulo</option>
+
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Cidade</label>
+                        <select class="ui fluid dropdown" name="pessoa[cidade]">
+                            <option value="">Selecione sua Cidade</option>
+                            <option value="Fortaleza">Fortaleza</option>
+                            <option value="São Paulo">São Paulo</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ui  segment">
+                    <div class="field">
+                        <div class="ui toggle checkbox">
+                            <input type="checkbox" name="gift" tabindex="0" class="hidden">
+                            <label>Do not include a receipt in the package</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui button" tabindex="0">Enviar Formulário</div>
+            </form>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/semantic.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/formulario.js"></script>
+</body>
+</html>
