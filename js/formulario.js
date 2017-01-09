@@ -7,7 +7,38 @@ $(document).ready(function () {
     $('.ui.checkbox')
         .checkbox()
     ;
-   console.log("asd");
+
+    $('.steps .step').tab() ;
+
+    $('.ui.button.b_segundo')
+        .on('click', function(e) {
+            // programmatically activating tab
+            $('#segundo').trigger("click");
+            $('#segundo').removeClass("disabled");
+            console.log("aaa");
+            e.preventDefault();
+            return false;
+        })
+    ;
+
+    $('.ui.button.b_terceiro')
+        .on('click', function(e) {
+            // programmatically activating tab
+            $('#terceiro').trigger("click");
+            $('#terceiro').removeClass("disabled");
+            console.log("aaa");
+            e.preventDefault();
+            return false;
+        })
+    ;
+
+
+    $('.mostrar').on('click',function (e) {
+
+       console.log(($(".formulario").serialize()));
+        e.preventDefault();
+        return false;
+    });
 
 
 

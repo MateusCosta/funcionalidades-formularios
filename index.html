@@ -1,147 +1,225 @@
-<!DOCTYPE html>
-<html>
-<meta charset="utf-8">
-<head>
-    <title>Funcionalidade Formulários</title>
-    <link rel="stylesheet" type="text/css" href="css/semantic.css" />
-    <link rel="stylesheet" type="text/css" href="css/icon.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="icon" href="css/github.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="css/img/github.ico" type="image/x-icon"/>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html>
+    <meta charset="utf-8">
+    <head>
+        <title>Funcionalidade Formulários</title>
+        <link rel="stylesheet" type="text/css" href="css/semantic.css" />
+        <link rel="stylesheet" type="text/css" href="css/icon.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="icon" href="css/github.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="css/img/github.ico" type="image/x-icon"/>
+    </head>
+    <body>
 
-<div class="ui container margin-top">
-    <h2 class="ui center aligned inverted icon header">
-        <i class="circular users  icon"></i>
-        Formulário de Cadastro
-    </h2>
+    <div class="ui container margin-top">
+        <h2 class="ui center aligned inverted icon header">
+            <i class="circular users  icon"></i>
+            Formulário de Cadastro
+        </h2>
 
-<form class="ui form">
-    <div class="ui  grid ">
+    <form class="ui form formulario" method="get">
+        <div class="ui  grid ">
 
-    <div class="sixteen column row">
-        <div class="ten wide centered column">
-            <form class="ui form">
-                <h4 class="ui dividing header inverted">Informações Básicas</h4>
+        <div class="sixteen column row">
 
-                    <div class="three fields">
+            <div class="eleven wide centered column">
 
-                        <div class="field">
-                            <label for="pessoa[nome]">Nome</label>
-                            <input type="text" name="pessoa[nome]" placeholder="Nome" id="pessoa[nome]">
-                        </div>
-                        <div class="field">
-                            <label for="pessoa[sobrenome]">Sobrenome</label>
-                            <input type="text" name="pessoa[sobrenome]" placeholder="Sobrenome" id="pessoa[sobrenome]">
-                        </div>
-                        <div class="field">
-                            <label for="pessoa[data-nascimento]">Data de Nascimento</label>
-                            <input type="text" name="pessoa[data-nascimento]" placeholder="dd/mm/aaaa" id="pessoa[data-nascimento]">
+                <div class="ui three top attached steps ">
+
+                    <div class="active step primeiro" data-tab="first">
+                        <i class="user icon"></i>
+                        <div class="content">
+                            <div class="title">Dados Pessoais</div>
+                            <div class="description">Preencha com deus dados pessoais</div>
                         </div>
                     </div>
-                <h4 class="ui dividing header inverted">Informações de Contato</h4>
-                <div class="fields">
-                    <div class="ten wide field">
-                        <label for="pessoa[email]">Email</label>
-                        <input type="text" name="pessoa[email]" placeholder="" id="pessoa[email]">
-
-                    </div>
-                    <div class="six wide field">
-                        <label for="pessoa[telefone]">Telefone</label>
-                        <input type="text" name="pessoa[telefone]" placeholder="Telefone" id="pessoa[telefone]">
-
-                    </div>
-
-
-
-                </div>
-
-                <h4 class="ui dividing header inverted">Endereço</h4>
-
-                <div class="fields">
-                    <div class="six wide field">
-                        <label>CEP</label>
-                        <div class="ui action input">
-                            <input type="text" name="pessoa[cep]">
-                            <button class="ui teal right labeled icon button pesquisa-cep">
-                                <i class="search icon cep-icon"></i>
-                                Pesquisar
-                            </button>
+                    <div class="disabled step segundo" data-tab="second" id="segundo">
+                        <i class="lock icon"></i>
+                        <div class="content">
+                            <div class="title">Dados de Acesso</div>
+                            <div class="description">Defina seu nome de usuário e senha de acesso</div>
                         </div>
-
                     </div>
+                    <div class="disabled step" data-tab="third" id="terceiro">
+                        <i class="info icon"></i>
 
-                    <div class="nine wide field">
-                        <label>Rua</label>
-                        <input type="text" name="pessoa[rua]" placeholder="Rua"/>
-
-                    </div>
-
-
-                </div>
-
-                <div class="two fields">
-                    <div class="field">
-                        <label>Estado</label>
-                        <select class="ui fluid dropdown" name="pessoa[estado]">
-                            <option value="">Selecione seu Estado</option>
-                            <option value="CE">Ceará</option>
-                            <option value="SP">São Paulo</option>
-
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Cidade</label>
-                        <select class="ui fluid dropdown" name="pessoa[cidade]">
-                            <option value="">Selecione sua Cidade</option>
-                            <option value="Fortaleza">Fortaleza</option>
-                            <option value="São Paulo">São Paulo</option>
-
-                        </select>
-                    </div>
-                </div>
-
-                <div class="ui  segment">
-                    <div class="field">
-                        <div class="ui toggle checkbox">
-                            <input type="checkbox" name="gift" tabindex="0" class="hidden">
-                            <label>Do not include a receipt in the package</label>
+                        <div class="content">
+                            <div class="title">Confirmação dos Dados</div>
+                            <div class="description">Confirme a os dados dos formulários anteriores</div>
                         </div>
                     </div>
                 </div>
-                <div class="ui button" tabindex="0">Enviar Formulário</div>
-            </form>
+
+            </div>
+
+
+
+            <div class="eleven wide centered column" >
+
+                <div class="ui segment  tab segment" data-tab="fourth">
+
+
+                </div>
+                <div class="ui segment active tab segment" data-tab="first">
+                    <div class="ui form">
+                        <h4 class="ui dividing  header ">Informações Básicas</h4>
+
+                        <div class="three fields">
+
+                            <div class="field">
+                                <label for="pessoa[nome]">Nome</label>
+                                <input type="text" name="pessoa[nome]" placeholder="Nome" id="pessoa[nome]">
+                            </div>
+                            <div class="field">
+                                <label for="pessoa[sobrenome]">Sobrenome</label>
+                                <input type="text" name="pessoa[sobrenome]" placeholder="Sobrenome" id="pessoa[sobrenome]">
+                            </div>
+                            <div class="field">
+                                <label for="pessoa[data-nascimento]">Data de Nascimento</label>
+                                <input type="text" name="pessoa[data-nascimento]" placeholder="dd/mm/aaaa" id="pessoa[data-nascimento]">
+                            </div>
+                        </div>
+                        <h4 class="ui dividing header ">Informações de Contato</h4>
+                        <div class="fields">
+                            <div class="ten wide field">
+                                <label for="pessoa[email]">Email</label>
+                                <input type="text" name="pessoa[email]" placeholder="Email" id="pessoa[email]">
+
+                            </div>
+                            <div class="six wide field">
+                                <label for="pessoa[telefone]">Telefone</label>
+                                <input type="text" name="pessoa[telefone]" placeholder="Telefone" id="pessoa[telefone]">
+
+                            </div>
+
+
+
+                        </div>
+
+                        <h4 class="ui dividing header ">Endereço</h4>
+
+                        <div class="fields">
+                            <div class="six wide field">
+                                <label>CEP</label>
+                                <div class="ui action input">
+                                    <input type="text" name="pessoa[cep]" placeholder="CEP">
+                                    <button class="ui black right labeled icon button pesquisa-cep">
+                                        <i class="search icon cep-icon"></i>
+                                        Pesquisar
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="seven wide field">
+                                <label>Rua</label>
+                                <input type="text" name="pessoa[rua]" placeholder="Rua"/>
+
+                            </div>
+                            <div class="three wide field">
+                            <label>Número</label>
+                            <input type="text" name="pessoa[numero]" placeholder="Número"/>
+                        </div>
+
+
+                        </div>
+
+                        <div class="two fields">
+                            <div class="field">
+                                <label>Estado</label>
+                                <select class="ui fluid dropdown" name="pessoa[estado]">
+                                    <option value="">Selecione seu Estado</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="SP">São Paulo</option>
+
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Cidade</label>
+                                <select class="ui fluid dropdown" name="pessoa[cidade]">
+                                    <option value="">Selecione sua Cidade</option>
+                                    <option value="Fortaleza">Fortaleza</option>
+                                    <option value="São Paulo">São Paulo</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <button class="ui animated black button b_segundo">
+                            <span class="visible content">Próximo</span>
+                            <span class="hidden content"><i class="right arrow icon"></i></span>
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="ui segment  tab segment" data-tab="second">
+                    <div class="fields">
+                        <div class="six wide field">
+                            <label>Campo 1</label>
+
+                                <input type="text" name="pessoa[campo1]" placeholder="CEP">
+
+
+
+                        </div>
+
+                        <div class="seven wide field">
+                            <label>Campo 2</label>
+                            <input type="text" name="pessoa[campo2]" placeholder="Rua"/>
+
+                        </div>
+                        <div class="three wide field">
+                            <label>Campo 3</label>
+                            <input type="text" name="pessoa[campo3]" placeholder="Número"/>
+                        </div>
+
+
+                    </div>
+                    <button class="ui animated black button b_terceiro">
+                        <span class="visible content">Próximo</span>
+                        <span class="hidden content"><i class="right arrow icon"></i></span>
+                    </button>
+
+                </div>
+                <div class="ui segment  tab segment" data-tab="third">
+                    <button class="ui button black mostrar">Mostrar no console</button>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
 
         </div>
 
 
+        </div>
+
+
+    </form>
+
+
+
+
+
+
+
+
 
 
     </div>
 
 
-    </div>
 
-
-</form>
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/semantic.js"></script>
-<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="js/formulario.js"></script>
-</body>
-</html>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/semantic.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="js/formulario.js"></script>
+    </body>
+    </html>
